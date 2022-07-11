@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(249, 252, 253);
+  font-family: sans-serif;
+}
+
+main {
+  border: 1px lightgray solid;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  background-color: white;
+}
+
+h3 {
+  position: relative;
+  margin: 20px 5px;
+  padding: 5px;
+  border-bottom: 1px lightgray solid;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputtext {
+  border: none;
+  padding: 3px;
+  font-size: 1.2rem;
+  min-width: 100%;
+}
+
+li {
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px lightgray solid;
+  position: relative;
+  display: flex;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+  border: none;
+  padding: 9px;
+}
+
+.fa-icon {
+  position: absolute;
+  right: 10px;
+  border: none;
+  padding: 0 5px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+#add::placeholder {
+  font-style: italic;
+}
+
+#add {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px lightgray solid;
+}
+
+.checkboxitem {
+  margin-right: 10px;
+}
+
+.clear {
+  text-align: center;
+  color: gray;
+  cursor: pointer;
+}
+
+.clearlist {
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.editdiv {
+  display: none;
+}
+
+.inputextedit {
+  padding: 10px 0;
+  border: none;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.taskdiv {
+  display: flex;
+  width: 90%;
+}
