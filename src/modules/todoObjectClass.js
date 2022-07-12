@@ -1,5 +1,6 @@
 import createTodoListComponents from './createTasksAndEvents.js';
 import MyToDoList from './mainContainerClass.js';
+import storeData from './localstorage.js';
 // initiate new instance of main class container
 const MyToDo = new MyToDoList();
 // call the ul element that contains all list items
@@ -23,7 +24,7 @@ class OneTaskListItem {
       completed: this.completed,
     });
     // save to local storage
-    localStorage.setItem('todotasks', JSON.stringify(mainArr));
+    storeData();
     // update the length of the container
     createTodoListComponents(this);
   }
@@ -32,7 +33,7 @@ class OneTaskListItem {
   removeFromToDo(index) {
     MyToDo.tasks = MyToDo.tasks.filter((task) => task.index !== Number(index));
     // update local storage
-    localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+    storeData();
     // set container to empty in order to update the index
     listContainer.innerHTML = '';
     // update index
@@ -50,7 +51,7 @@ class OneTaskListItem {
       return node;
     });
     // save changes to local storage
-    localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+    storeData();
   };
 
   // display
@@ -72,7 +73,7 @@ class OneTaskListItem {
       description: inputValue,
     };
     // save changes to local storage
-    localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+    storeData();
   };
 }
 export { MyToDo, OneTaskListItem };

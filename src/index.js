@@ -1,4 +1,5 @@
 import { MyToDo, OneTaskListItem } from './modules/todoObjectClass.js';
+import storeData from './modules/localstorage.js';
 import './style.css';
 
 const task = new OneTaskListItem();
@@ -10,7 +11,7 @@ addListItem.addEventListener('change', () => {
 const clearSelectedTasks = document.querySelector('.clear');
 clearSelectedTasks.addEventListener('click', () => {
   MyToDo.tasks = MyToDo.tasks.filter((task) => task.completed === false);
-  localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+  storeData();
   task.displayToDoList();
 });
 window.onload = () => {

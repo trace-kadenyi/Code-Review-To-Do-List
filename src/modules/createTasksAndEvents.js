@@ -1,4 +1,5 @@
 import { OneTaskListItem, MyToDo } from './todoObjectClass.js';
+import storeData from './localstorage.js';
 
 const listContainer = document.querySelector('.listContainer');
 const createTodoListComponents = (todoListComponent) => {
@@ -65,7 +66,7 @@ const createTodoListComponents = (todoListComponent) => {
       ...MyToDo.tasks[foundIndex], completed: e.target.checked,
     };
     // save changes to local storage
-    localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
+    storeData();
   });
   // edit text Item
   inputText.addEventListener('keydown', (e) => {
