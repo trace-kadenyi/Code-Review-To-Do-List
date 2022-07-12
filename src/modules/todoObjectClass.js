@@ -24,7 +24,7 @@ class OneTaskListItem {
       completed: this.completed,
     });
     // save to local storage
-    storeData();
+    storeData(MyToDo.tasks);
     // update the length of the container
     createTodoListComponents(this);
   }
@@ -33,7 +33,7 @@ class OneTaskListItem {
   removeFromToDo(index) {
     MyToDo.tasks = MyToDo.tasks.filter((task) => task.index !== Number(index));
     // update local storage
-    storeData();
+    storeData(MyToDo.tasks);
     // set container to empty in order to update the index
     listContainer.innerHTML = '';
     // update index
@@ -51,7 +51,7 @@ class OneTaskListItem {
       return node;
     });
     // save changes to local storage
-    storeData();
+    storeData(MyToDo.tasks);
   };
 
   // display
@@ -73,7 +73,7 @@ class OneTaskListItem {
       description: inputValue,
     };
     // save changes to local storage
-    storeData();
+    storeData(MyToDo.tasks);
   };
 }
 export { MyToDo, OneTaskListItem };

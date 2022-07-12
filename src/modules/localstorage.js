@@ -1,5 +1,5 @@
-const storeData = () => {
-    localStorage.setItem('todotasks', JSON.stringify(MyToDo.tasks));
-}
+const storeData = (mainArr) => {
+  localStorage.setItem('todotasks', JSON.stringify(mainArr));
+};
 
 export default storeData;

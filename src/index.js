@@ -11,7 +11,7 @@ addListItem.addEventListener('change', () => {
 const clearSelectedTasks = document.querySelector('.clear');
 clearSelectedTasks.addEventListener('click', () => {
   MyToDo.tasks = MyToDo.tasks.filter((task) => task.completed === false);
-  storeData();
+  storeData(MyToDo.tasks);
   task.displayToDoList();
 });
 window.onload = () => {

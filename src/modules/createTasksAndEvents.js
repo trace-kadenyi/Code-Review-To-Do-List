@@ -66,7 +66,7 @@ const createTodoListComponents = (todoListComponent) => {
       ...MyToDo.tasks[foundIndex], completed: e.target.checked,
     };
     // save changes to local storage
-    storeData();
+    storeData(MyToDo.tasks);
   });
   // edit text Item
   inputText.addEventListener('keydown', (e) => {
